@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web worker</title>
+
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+      }
+      h2 {
+        text-align: center;
+      }
+      .output-cont {
+        margin-right: 80px;
+        margin-top: 28px;
+        width: 300px;
+      }
+      .output-cont h3 {
+        height: 30px;
+      }
+      .output-cont button {
+        padding: 4px 8px;
+        font-size: 1.1rem;
+      }
+      .workers {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .browser {
+        margin: 20px 20% 0;
+        width: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Web workers</h2>
+    <div class="workers">
+      <div class="output-cont">
+        <button id="startWorker1">start worker</button>
+        <h3 id="workerOutput1"></h3>
+        <button id="stopWorker1">terminate worker</button>
+      </div>
+      <div class="output-cont">
+        <button id="startWorker2">start worker</button>
+        <h3 id="workerOutput2"></h3>
+        <button id="stopWorker2">terminate worker</button>
+      </div>
+      <div class="output-cont">
+        <button id="startWorker3">start worker</button>
+        <h3 id="workerOutput3"></h3>
+        <button id="stopWorker3">terminate worker</button>
+      </div>
+    </div>
+    <hr />
+    <h2>JavaScript</h2>
+    <div class="browser">
+      <div class="output-cont">
+        <button id="mainThread">start blocking thread</button>
+        <h3 id="mainThreadOutput"></h3>
+      </div>
+      <div class="output-cont"><button onclick="alert('browser responsive!')">show alert</button></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
